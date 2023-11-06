@@ -1,0 +1,25 @@
+import random
+play=True
+while(play==True):
+    
+    options = ["rock", "paper", "scissors"]
+    computer = random.choice(options)
+    userchoice=input("Rock, Paper or Scissors:")
+    user=userchoice.lower()
+    
+    if user==computer:
+        print("It's a tie!")
+    elif user=="rock" and computer=="scissors":
+        print("You win!")
+    elif user=="scissors" and computer=="paper":
+        print("You Win!")
+    else:
+        print("You Lose!")
+    
+    play_again=input("wanna play again?(Yes/No):")
+    playagain=play_again.lower()
+    if playagain==("No"):
+        play=False
+        break
+    else:
+        play=True
